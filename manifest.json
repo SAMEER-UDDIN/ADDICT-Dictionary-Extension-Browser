@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "ADDICT",
+  "version": "0.0.1",
+  "permissions": ["activeTab", "storage", "contextMenus"],
+  "action": {
+    "default_title": "HELLO",
+    "default_popup": "popup.html"
+  },
+  "description": "Select a word on the webpage and open popup to look up in the dictionary",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
